@@ -1,23 +1,22 @@
-// References:
-// https://www.w3schools.com/java/java_math.asp
-// https://www.w3schools.com/java/java_user_input.asp
-
+// URL: https://www.w3schools.com/java/java_math.asp
 import java.util.Scanner;
 
 public class CircleArea {
     public static void main(String[] args) {
+        // 1. Setup the ear to listen
         Scanner input = new Scanner(System.in);
 
-        // 1. Get the radius from the user
+        // 2. Ask for the radius
         System.out.print("Enter the radius of the circle: ");
+
+        // 3. Use double (decimal) because radius isn't always a whole number
         double radius = input.nextDouble();
 
-        // 2. Calculate area: Area = PI * radius^2
-        // We use Math.PI for the constant and Math.pow for the exponent
-        double area = Math.PI * Math.pow(radius, 2);
+        // 4. Calculate the area (Area = PI * r * r)
+        double area = Math.PI * radius * radius;
 
-        // 3. Display the result
-        System.out.println("The area of a circle with radius " + radius + " is " + area);
+        // 5. Print the result
+        System.out.println("The area of the circle is: " + area);
 
         input.close();
     }
